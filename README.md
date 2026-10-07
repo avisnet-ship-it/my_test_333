@@ -1,0 +1,12 @@
+# my_test_333 — laboratório de testes de senajg.com.br
+
+Versões experimentais da página principal. Cada teste fica numa pasta com uma sigla:
+
+| Pasta | Efeito |
+|---|---|
+| `nbc/` | Nebulosa em CSS (sem JavaScript) |
+| `bgc/` | Bolhas Galácticas em Canvas |
+| `cec/` | Céu Estelar em Canvas |
+
+As páginas têm `noindex` e não aparecem no Google. O conteúdo é a página principal original;
+muda só o fundo. Gerado por `geracao/gen_testes.py` (repositório privado).
