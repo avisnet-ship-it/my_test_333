@@ -8,6 +8,8 @@ Versões experimentais da página principal. Cada teste fica numa pasta com uma 
 | `bgc/` | Bolhas Galácticas em Canvas |
 | `cec/` | Céu Estelar em Canvas |
 | `cmp/` | Cosmos Completo: estrelas + cometas + bolhas galácticas |
+| `cri/` | O Cristo Cósmico (pt) com estrelas e cometas ×7, sem bolhas |
+| `cri-en/` | The Cosmic Christ (en), idem |
 
 As páginas têm `noindex` e não aparecem no Google. O conteúdo é a página principal original;
 muda só o fundo. Gerado por `geracao/gen_testes.py` (repositório privado).
