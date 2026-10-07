@@ -5,7 +5,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[TESTE bgc] Sena JG — Livros</title>
+  <title>[TESTE cmp] Sena JG — Livros</title>
   <meta name="description" content="Livros de Sena JG: Série Tesouros para uma Vida e Série Ganhe Dinheiro (Assuntos cotidianos — Finanças e Organização).">
 
   <meta name="theme-color" content="#06061a">
@@ -264,7 +264,7 @@
 /* Fundo cósmico — código próprio, sem bibliotecas. Respeita "reduzir movimento",
    pausa com a aba oculta e limita a resolução para poupar bateria. */
 (() => {
-  const MODO = "bgc";               // "bgc" = bolhas galácticas, "cec" = céu estelar, "cmp" = tudo junto
+  const MODO = "cmp";               // "bgc" = bolhas galácticas, "cec" = céu estelar, "cmp" = tudo junto
   // Densidade: 1 = versão original; padrão 2.75. Para experimentar, abra a página com ?d=1, ?d=2.5, ?d=3 ...
   const D = Math.min(5, Math.max(0.5, parseFloat(new URLSearchParams(location.search).get("d")) || 2.75));
   const comBolhas = MODO !== "cec", comCometas = MODO !== "bgc", deriva = MODO !== "bgc";

@@ -17,6 +17,9 @@
     .sigla { display: inline-block; min-width: 3.2rem; margin-right: 0.5rem; padding: 0.1rem 0.5rem; border-radius: 6px; background: var(--ouro); color: #1a1300; font-weight: 700; text-align: center; font-family: monospace; font-size: 1rem; }
     .nome { font-weight: 700; font-size: 1.1rem; }
     .desc { display: block; margin-top: 0.35rem; color: var(--suave); font-size: 0.95rem; }
+    .dens { margin: 1.5rem 0 0; padding: 1rem 1.25rem; border-left: 4px solid var(--ouro); border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: var(--suave); font-size: 0.95rem; }
+    .dens a { color: var(--ouro); }
+    code { padding: 0.05rem 0.35rem; border-radius: 4px; background: rgba(255, 255, 255, 0.1); color: var(--texto); }
     footer { margin-top: 2rem; color: var(--suave); font-size: 0.9rem; }
     footer a { color: var(--ouro); }
   </style>
@@ -32,7 +35,11 @@
         <span class="desc">Céu estrelado cintilando e bolhas transparentes com pequenas galáxias espirais dentro, flutuando ao fundo. Programa próprio de ~5 KB.</span></a></li>
       <li><a href="cec/"><span class="sigla">cec</span><span class="nome">Céu Estelar em Canvas</span>
         <span class="desc">Estrelas em profundidade derivando lentamente e uma estrela cadente discreta de tempos em tempos.</span></a></li>
+      <li><a href="cmp/"><span class="sigla">cmp</span><span class="nome">Cosmos Completo</span>
+        <span class="desc">Tudo junto: estrelas em profundidade, vários cometas ao mesmo tempo (descendo para os dois lados) e bolhas com galáxias, espalhados por toda a tela.</span></a></li>
     </ul>
+    <p class="dens">Densidade dos corpos celestes (nos testes <b>bgc</b>, <b>cec</b> e <b>cmp</b>): o padrão é <b>2,75×</b> a versão anterior. Para comparar, acrescente ao endereço
+      <code>?d=1</code> (original), <code>?d=2.5</code>, <code>?d=3</code> ou <code>?d=4</code>. Exemplo: <a href="cmp/?d=1">cmp, densidade original</a> · <a href="cmp/?d=2.5">2,5×</a> · <a href="cmp/?d=4">4×</a></p>
     <footer>
       <p>Todas respeitam a opção "reduzir movimento" do aparelho (o fundo fica parado) e pausam quando a aba não está visível.</p>
       <p>Original, para comparar: <a href="https://senajg.com.br/">senajg.com.br</a></p>

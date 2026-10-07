@@ -264,11 +264,14 @@
 /* Fundo cósmico — código próprio, sem bibliotecas. Respeita "reduzir movimento",
    pausa com a aba oculta e limita a resolução para poupar bateria. */
 (() => {
-  const MODO = "cec";               // "bgc" = bolhas galácticas, "cec" = céu estelar
+  const MODO = "cec";               // "bgc" = bolhas galácticas, "cec" = céu estelar, "cmp" = tudo junto
+  // Densidade: 1 = versão original; padrão 2.75. Para experimentar, abra a página com ?d=1, ?d=2.5, ?d=3 ...
+  const D = Math.min(5, Math.max(0.5, parseFloat(new URLSearchParams(location.search).get("d")) || 2.75));
+  const comBolhas = MODO !== "cec", comCometas = MODO !== "bgc", deriva = MODO !== "bgc";
   const tela = document.getElementById("cosmos"), g = tela.getContext("2d");
   const calmo = matchMedia("(prefers-reduced-motion: reduce)");
   const A = (a, b) => a + Math.random() * (b - a);
-  let L, H, dpr, estrelas = [], bolhas = [], cadente = null, raf = 0, antes = 0, proxCadente = 0;
+  let L, H, dpr, estrelas = [], bolhas = [], cadentes = [], raf = 0, antes = 0, proxCadente = 0;
 
   function galaxia(r) {               // desenha uma vez a bolha com a galáxia dentro
     const s = document.createElement("canvas"), k = Math.ceil(r * 2 * dpr);
@@ -301,14 +304,14 @@
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     L = innerWidth; H = innerHeight;
     tela.width = L * dpr; tela.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.round(L * H / (MODO === "cec" ? 1900 : 2800));
+    const n = Math.round(L * H / (MODO === "cec" ? 1900 : MODO === "cmp" ? 2200 : 2800) * D);
     estrelas = Array.from({ length: n }, () => ({
       x: A(0, L), y: A(0, H), z: A(0.2, 1),          // z = profundidade (perto = maior e mais rápida)
       a: A(0.25, 0.95), f: A(0.4, 1.8), p: A(0, 6.3)
     }));
     bolhas = [];
-    if (MODO === "bgc") {
-      const qt = L < 700 ? 5 : 9;
+    if (comBolhas) {
+      const qt = Math.round((L < 700 ? 5 : 9) * D);
       for (let i = 0; i < qt; i++) {
         const r = A(20, L < 700 ? 50 : 80);
         bolhas.push({ r, x: A(0, L), y: A(0, H), vx: A(-0.05, 0.05), vy: A(-0.11, -0.03),
@@ -323,9 +326,9 @@
     g.clearRect(0, 0, L, H);
     g.fillStyle = "#fff";
     for (const e of estrelas) {
-      if (MODO === "cec") { e.x -= 0.06 * e.z * passo; if (e.x < 0) e.x += L; }   // leve deriva em profundidade
+      if (deriva) { e.x -= 0.06 * e.z * passo; if (e.x < 0) e.x += L; }   // leve deriva em profundidade
       g.globalAlpha = e.a * (0.6 + 0.4 * Math.sin(s * e.f + e.p));
-      const t2 = 0.4 + e.z * (MODO === "cec" ? 1.5 : 1.1);
+      const t2 = 0.4 + e.z * (deriva ? 1.5 : 1.1);
       g.fillRect(e.x, e.y, t2, t2);
     }
     for (const b of bolhas) {
@@ -335,19 +338,24 @@
       g.globalAlpha = b.alfa;
       g.drawImage(b.img, b.x - b.r, b.y - b.r, b.r * 2, b.r * 2);
     }
-    if (MODO === "cec") {
-      if (!cadente && t > proxCadente) {
-        cadente = { x: A(L * 0.3, L * 1.1), y: A(-20, H * 0.35), v: A(7, 11), vida: 1 };
+    if (comCometas) {
+      if (t > proxCadente && cadentes.length < 5) {          // nasce em qualquer ponto da metade de cima
+        const sentido = Math.random() < 0.5 ? -1 : 1;        // -1 = vai para a esquerda, 1 = para a direita
+        cadentes.push({
+          x: sentido < 0 ? A(L * 0.25, L * 1.15) : A(-L * 0.15, L * 0.75),
+          y: A(-20, H * 0.55), v: A(7, 11), vida: 1, sentido
+        });
+        proxCadente = t + A(9000, 16000) / D;
       }
-      if (cadente) {
-        const c = cadente, cx = -c.v * 0.9, cy = c.v * 0.45;
+      cadentes = cadentes.filter(c => {
+        const cx = c.sentido * c.v * 0.9, cy = c.v * 0.45;
         const rastro = g.createLinearGradient(c.x, c.y, c.x - cx * 12, c.y - cy * 12);
         rastro.addColorStop(0, `rgba(255,255,255,${0.85 * c.vida})`); rastro.addColorStop(1, "rgba(255,255,255,0)");
         g.globalAlpha = 1; g.strokeStyle = rastro; g.lineWidth = 1.6;
         g.beginPath(); g.moveTo(c.x, c.y); g.lineTo(c.x - cx * 12, c.y - cy * 12); g.stroke();
         c.x += cx * passo; c.y += cy * passo; c.vida -= 0.012 * passo;
-        if (c.vida <= 0 || c.x < -100 || c.y > H + 100) { cadente = null; proxCadente = t + A(9000, 16000); }
-      }
+        return c.vida > 0 && c.x > -100 && c.x < L + 100 && c.y < H + 100;
+      });
     }
     g.globalAlpha = 1;
   }
@@ -356,7 +364,7 @@
   function iniciar() {
     cancelAnimationFrame(raf); antes = 0;
     if (calmo.matches || document.hidden) { quadro(0); return; }   // sem movimento: só um quadro parado
-    proxCadente = performance.now() + 4000;
+    proxCadente = performance.now() + 1500;
     raf = requestAnimationFrame(ciclo);
   }
   let espera;
