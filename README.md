@@ -1,6 +1,6 @@
 # my_test_333 — laboratório de testes de senajg.com.br
 
-Versões experimentais da página principal. Cada teste fica numa pasta com uma sigla:
+Versões experimentais da página principal. A página inicial do laboratório (`index.html`) é o menu com os links dos testes; cada teste fica numa pasta com uma sigla:
 
 | Pasta | Efeito |
 |---|---|
