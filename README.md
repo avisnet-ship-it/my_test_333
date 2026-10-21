@@ -12,6 +12,6 @@ Versões experimentais da página principal. Cada teste fica numa pasta com uma 
 | `cri-en/` | The Cosmic Christ (en), idem |
 
 As páginas têm `noindex` e não aparecem no Google. O conteúdo é a página principal original;
-muda só o fundo. Gerado por `geracao/gen_testes.py` (repositório privado).
+muda só o fundo. Gerado por `tools/gen_testes.py` (repositório privado).
 
 Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d=2.5`, `?d=3`... na URL.
