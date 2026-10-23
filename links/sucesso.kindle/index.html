@@ -183,6 +183,7 @@
     .rodape .chip { display: inline-block; padding-left: 0.6rem; padding-right: 0.6rem; }
     .rodape .seta { width: 1.89em; height: 1.26em; vertical-align: -0.27em; width: 2.625cap; height: 1.75cap; vertical-align: -0.375cap; margin-right: 0.45em; overflow: visible; transform-origin: 50% 50%; }
     .rodape .seta.gira g { filter: none; }
+    .marca:hover, .marca:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px; background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent); }
 
     @media (max-width: 860px) { .livro { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 0.5rem; } .capa { max-width: var(--capa-max-celular); } }
     @media (max-width: 420px) { .idiomas span { display: none; } .idiomas a { padding: 0.4rem 0.55rem; } }
@@ -191,12 +192,6 @@
     /* ---------- Metal escovado: botões de compra ---------- */
     .compra { grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr)); max-width: 24rem; }
     .compra .btn { min-height: 4.6rem; }
-  
-    /* teste: o "Sena JG" do topo sublinha e ganha um fundo leve na própria cor, com o mouse ou o foco do teclado */
-    a.marca:hover, a.marca:focus-visible, h1 a:hover, h1 a:focus-visible {
-      text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px;
-      background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent);
-    }
   </style>
   <script src="/my_test_333/rev39/assets/aco-escovado.js" defer data-paleta='{"ceu":"#0a46c8","meio":"#3f8fe6","horizonte":"#bfe0ff","montanha":"#0c2442","chao":"#0a68c8","chave":"#ffffff","faixa":"#dff1ff","quente":"#fff6d6","acento":"#7fd0ff","metal":"#f4f6f8","liso":1,"onda":0,"abaulado":0,"olho":0.34,"inclina":0.24,"cidade":1,"aguia":[0,0.33,1.0,0.5],"foto":"/my_test_333/rev39/assets/mirror-city.webp","janela":[1.1,-0.364,0.736],"fotoAguia":"/my_test_333/rev39/assets/mirror-eagle.webp","brilho":1.2,"relevo":1.7}'></script>
   <script src="/assets/seta-voltar.js" defer></script>

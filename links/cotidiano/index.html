@@ -117,6 +117,15 @@
     .livro img { display: block; width: auto; height: 248px; border-radius: 4px; box-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.75); transition: transform 0.2s ease; }
     .livro a.capa:hover img { transform: translateY(-3px); }
     h3 { margin: 1rem 0 0.2rem; font-size: 1.12rem; line-height: 1.25; }
+    /* o título de cada livro é link para a página dele: sublinhado; com o mouse em qualquer ponto do card, ou com o foco
+       do teclado num link dele, fica dourado e com o sublinhado mais grosso, como com o mouse em cima do título (regras
+       separadas: o navegador que não conhece :has fica só com a do mouse) */
+    .livro h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .livro:hover h3 a { color: var(--ouro); text-decoration-thickness: 2px; }
+    .livro:has(:focus-visible) h3 a { color: var(--ouro); text-decoration-thickness: 2px; }
+    /* com o mouse na capa, ela sobe, e o que sobe é pintado por cima do que não tem posição: o título, o autor e a
+       etiqueta ganham posição, para ficar por cima da sombra da capa (senão a sombra escurece o título) */
+    .livro h3, .livro .autor, .livro .tag { position: relative; }
     .autor { margin: 0 0 0.8rem; color: var(--texto-suave); }
     .tag { display: inline-block; margin: -0.4rem 0 0.7rem; padding: 0.1rem 0.6rem; border: 1px solid rgba(241, 192, 59, 0.6); border-radius: 999px; font-size: 0.78rem; color: var(--ouro); }
     .btn { display: inline-block; padding: 0.6rem 1.2rem; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.85); font-weight: 700; text-decoration: none; transition: transform 0.2s ease; }
@@ -142,6 +151,7 @@
     .voltar .chip { padding-left: 0.6rem; padding-right: 0.6rem; }
     .voltar .seta { width: 1.89em; height: 1.26em; vertical-align: -0.27em; width: 2.625cap; height: 1.75cap; vertical-align: -0.375cap; margin-right: 0.45em; overflow: visible; transform-origin: 50% 50%; }
     .voltar .seta.gira g { filter: none; }
+    .marca:hover, .marca:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px; background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent); }
     .btn-cristo { background: #a9502a; color: #fff; }
     .btn-universos { background: #ffe600; color: #1a0050; }
     .btn-solucao { background: #1a3cb4; color: #fff; }
@@ -149,18 +159,6 @@
     .btn-dinheiro { background: linear-gradient(160deg, #ffe58a, #e0a800); color: #1a1300; }
     .btn-kindle { background: linear-gradient(160deg, #ffe073, #f2a900); color: #141000; }
     .livro > .btn:first-child { margin: 0 0 1.4rem; }
-  
-    /* teste: o título de cada livro é link para a página do livro; com o mouse ou o foco do teclado, fica dourado */
-    .livro h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    .livro h3 a:hover, .livro h3 a:focus-visible { color: var(--ouro); text-decoration-thickness: 2px; }
-    /* teste: o título, o autor e a etiqueta ficam por cima da sombra da capa, que sobe com o mouse */
-    .livro h3, .livro .autor, .livro .tag { position: relative; }
-  
-    /* teste: o "Sena JG" do topo sublinha e ganha um fundo leve na própria cor, com o mouse ou o foco do teclado */
-    a.marca:hover, a.marca:focus-visible, h1 a:hover, h1 a:focus-visible {
-      text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px;
-      background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent);
-    }
   </style>
   <script src="/my_test_333/rev39/assets/aco-escovado.js" defer data-paleta='{"ceu":"#3a5f9e","meio":"#9cb8de","horizonte":"#fff1d0","montanha":"#4a3a22","chao":"#6a4a1e","chave":"#fff0d0","faixa":"#ffffff","quente":"#ffd45c","acento":"#ff9a3c","metal":"#ffe39e","brilho":1.1,"liso":1,"onda":0.09,"relevo":1.7,"por":{"btn-kindle":{"ceu":"#0a46c8","meio":"#3f8fe6","horizonte":"#bfe0ff","montanha":"#0c2442","chao":"#0a68c8","chave":"#ffffff","faixa":"#dff1ff","quente":"#fff6d6","acento":"#7fd0ff","metal":"#f4f6f8","liso":1,"onda":0,"abaulado":0,"olho":0.34,"inclina":0.24,"cidade":1,"aguia":[0,0.3,0.55,0.275],"foto":"/my_test_333/rev39/assets/mirror-city.webp","janela":[1.1,-0.364,0.736],"fotoAguia":"/my_test_333/rev39/assets/mirror-eagle.webp","brilho":1.2,"relevo":1.7}}}'></script>
   <script src="/assets/seta-voltar.js" defer></script>
@@ -207,7 +205,7 @@
   </header>
 
   <main class="pagina">
-    <h1><a href="/my_test_333/links/">Sena JG</a></h1>
+    <h1><a class="marca" href="/my_test_333/links/">Sena JG</a></h1>
     <p class="sub">Assuntos cotidianos — Finanças e Organização</p>
 
     <section class="secao">

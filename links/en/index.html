@@ -129,6 +129,15 @@
     .livro img { display: block; width: auto; height: 248px; border-radius: 4px; box-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.75); transition: transform 0.2s ease; }
     .livro a.capa:hover img { transform: translateY(-3px); }
     h3 { margin: 1rem 0 0.2rem; font-size: 1.12rem; line-height: 1.25; }
+    /* o título de cada livro é link para a página dele: sublinhado; com o mouse em qualquer ponto do card, ou com o foco
+       do teclado num link dele, fica dourado e com o sublinhado mais grosso, como com o mouse em cima do título (regras
+       separadas: o navegador que não conhece :has fica só com a do mouse) */
+    .livro h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .livro:hover h3 a { color: var(--ouro); text-decoration-thickness: 2px; }
+    .livro:has(:focus-visible) h3 a { color: var(--ouro); text-decoration-thickness: 2px; }
+    /* com o mouse na capa, ela sobe, e o que sobe é pintado por cima do que não tem posição: o título, o autor e a
+       etiqueta ganham posição, para ficar por cima da sombra da capa (senão a sombra escurece o título) */
+    .livro h3, .livro .autor, .livro .tag { position: relative; }
     .autor { margin: 0 0 0.8rem; color: var(--texto-suave); }
     .tag { display: inline-block; margin: -0.4rem 0 0.7rem; padding: 0.1rem 0.6rem; border: 1px solid rgba(241, 192, 59, 0.6); border-radius: 999px; font-size: 0.78rem; color: var(--ouro); }
     .btn { display: inline-block; padding: 0.6rem 1.2rem; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.85); font-weight: 700; text-decoration: none; transition: transform 0.2s ease; }
@@ -158,18 +167,6 @@
     .btn-dinheiro { background: linear-gradient(160deg, #ffe58a, #e0a800); color: #1a1300; }
     .btn-kindle { background: linear-gradient(160deg, #ffe073, #f2a900); color: #141000; }
     .livro > .btn:first-child { margin: 0 0 1.4rem; }
-  
-    /* teste: o título de cada livro é link para a página do livro; com o mouse ou o foco do teclado, fica dourado */
-    .livro h3 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    .livro h3 a:hover, .livro h3 a:focus-visible { color: var(--ouro); text-decoration-thickness: 2px; }
-    /* teste: o título, o autor e a etiqueta ficam por cima da sombra da capa, que sobe com o mouse */
-    .livro h3, .livro .autor, .livro .tag { position: relative; }
-  
-    /* teste: o "Sena JG" do topo sublinha e ganha um fundo leve na própria cor, com o mouse ou o foco do teclado */
-    a.marca:hover, a.marca:focus-visible, h1 a:hover, h1 a:focus-visible {
-      text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px;
-      background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent);
-    }
   </style>
   <script src="/my_test_333/rev39/assets/aco-escovado.js" defer data-paleta='{"ceu":"#000052","meio":"#1f8f8a","horizonte":"#f6e7c1","montanha":"#2a1446","chao":"#3a0f2e","chave":"#ffffff","faixa":"#9ff0ea","quente":"#f1c03b","acento":"#e0337f"}'></script>
 </head>

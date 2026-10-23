@@ -321,6 +321,7 @@
     .rodape .chip { display: inline-block; padding-left: 0.6rem; padding-right: 0.6rem; }
     .rodape .seta { width: 1.89em; height: 1.26em; vertical-align: -0.27em; width: 2.625cap; height: 1.75cap; vertical-align: -0.375cap; margin-right: 0.45em; overflow: visible; transform-origin: 50% 50%; }
     .rodape .seta.gira g { filter: none; }
+    .marca:hover, .marca:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px; background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent); }
 
     /* Desktop: botões empilhados, com a largura exata da capa (268 px) e um pouco
        mais baixos, para a coluna inteira caber na tela */
@@ -373,12 +374,6 @@
     /* ---------- Metal escovado: botões de compra ---------- */
     .compra { grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr)); max-width: 24rem; }
     .compra .btn { min-height: 4.6rem; }
-  
-    /* teste: o "Sena JG" do topo sublinha e ganha um fundo leve na própria cor, com o mouse ou o foco do teclado */
-    a.marca:hover, a.marca:focus-visible, h1 a:hover, h1 a:focus-visible {
-      text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px;
-      background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent);
-    }
   </style>
   <script src="/my_test_333/rev39/assets/aco-escovado.js" defer data-paleta='{"ceu":"#3a3fd0","meio":"#2f7fe6","horizonte":"#ffc23a","montanha":"#7d8aa8","chao":"#2f7a1f","chave":"#fff2c0","faixa":"#5fe8c0","quente":"#ff8a5a","acento":"#2fd0a0","metal":"#f2f0f4","psi":1,"brilho":1.1,"liso":1,"onda":0.09,"relevo":1.7}'></script>
   <script src="/assets/seta-voltar.js" defer></script>
