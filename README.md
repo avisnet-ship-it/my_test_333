@@ -24,3 +24,5 @@ Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d
 ## Versão
 
 Este laboratório acompanha a versão **v3.3.0** (SenaJG-rev.44) do site, de 28/10/2026.
+
+Em preparação: **v4.0.0**, desde a SenaJG-rev.45, de 29/10/2026, com o domínio internacional, senajg.com, para o site em inglês.
