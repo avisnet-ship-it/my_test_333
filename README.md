@@ -32,4 +32,4 @@ Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d
 
 Este laboratório acompanha a versão **v3.3.0** (SenaJG-rev.44) do site, de 28/10/2026.
 
-Em preparação: **v4.0.0**, desde a SenaJG-rev.45, de 29/10/2026, com o domínio internacional, senajg.com, para o site em inglês. A revisão mais recente é a SenaJG-rev.51, de 30/10/2026, com as prévias `senajg-com/` e `rev51/`.
+Em preparação: **v4.0.0**, desde a SenaJG-rev.45, de 29/10/2026, com o domínio internacional, senajg.com, para o site em inglês. A revisão mais recente é a SenaJG-rev.52, de 30/10/2026, com os nomes finais das páginas em português do senajg.com.br; as prévias passam a apontar para os endereços novos. Antes, a SenaJG-rev.51, com as prévias `senajg-com/` e `rev51/`.
