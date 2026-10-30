@@ -342,13 +342,19 @@
     return s;
   }
 
-  function altura() {                // a altura do fundo na tela: a da tela inteira (100lvh), até 2160 px
-    return Math.min(Math.round(tela.getBoundingClientRect().height) || innerHeight, 2160);
+  // a altura da tela inteira, com a barra de endereço do celular recolhida (100lvh), medida num elemento que não é fixo:
+  // no Chrome do celular, um elemento fixo muda de altura quando a barra some ou volta; até 2160 px
+  function altura() {
+    const m = document.createElement("div");
+    m.style.cssText = "position:absolute;left:0;top:0;width:1px;height:100vh;height:100lvh;visibility:hidden;pointer-events:none";
+    document.body.appendChild(m); const h = Math.round(m.getBoundingClientRect().height); m.remove();
+    return Math.min(Math.max(h, innerHeight), 2160);
   }
 
   function montar() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     L = innerWidth; H = altura();      // acima da altura de um monitor 4K (a janela do Google), o fundo para de crescer
+    tela.style.height = H + "px";      // a altura fica em pixels: não muda com a barra de endereço
     tela.width = L * dpr; tela.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0);
     const n = Math.round(L * H / (MODO === "cec" ? 1900 : MODO === "cmp" ? 2200 : 2800) * D);
     estrelas = Array.from({ length: n }, () => ({
