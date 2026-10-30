@@ -16,7 +16,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
 | `senajg-com/` | Prévia do senajg.com, o site em inglês, nos endereços novos (as 8 páginas e a 404), montada pelo `tools/gen_site_en.py` (repositório privado) |
 | `rev51/` | Prévia da rev.51: a página principal com o fundo de estrelas e cometas na densidade 10, as bandeiras novas no seletor de língua e os livros em 2 e 2 nas janelas médias, e o Universos Paralelos com o subtítulo novo (duas páginas; as páginas em inglês estão na prévia `senajg-com/`) |
-| `fundo-celular/` | Teste do fundo de estrelas no celular (commit de teste da rev.52): as variantes A (preso ao topo da tela) e B (preso à base), cada uma com a página principal em português e O Cristo Cósmico |
+| `fundo-celular/` | Teste do fundo de estrelas no celular (commits de teste da rev.52): as variantes A (preso ao topo da tela), B (preso à base) e C (preso ao meio), cada uma com a página principal em português e O Cristo Cósmico; a B e a C com a altura da tela inteira, desde o teste 3 |
 
 As páginas têm `noindex` e não aparecem no Google. Nos testes de fundo, o conteúdo é a página principal original
 e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `rev39/`, `links/`,

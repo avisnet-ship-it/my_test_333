@@ -520,19 +520,28 @@
     return s;
   }
 
-  // a altura da tela inteira, com a barra de endereço do celular recolhida (100lvh), medida num elemento que não é fixo:
-  // no Chrome do celular, um elemento fixo muda de altura quando a barra some ou volta; até 2160 px
+  // a altura do fundo: a da tela inteira com as barras do navegador recolhidas (100lvh, medida num elemento que não é
+  // fixo); no celular, também a da tela (screen.height), porque há navegador que esconde a barra de cima e a de baixo;
+  // ou a da janela, se for maior; até 2160 px
+  const toque = matchMedia("(pointer: coarse)").matches;
   function altura() {
     const m = document.createElement("div");
     m.style.cssText = "position:absolute;left:0;top:0;width:1px;height:100vh;height:100lvh;visibility:hidden;pointer-events:none";
     document.body.appendChild(m); const h = Math.round(m.getBoundingClientRect().height); m.remove();
-    return Math.min(Math.max(h, innerHeight), 2160);
+    return Math.min(Math.max(h, innerHeight, toque ? screen.height || 0 : 0), 2160);
+  }
+
+  function crescer(h) {               // a janela ficou mais alta que o fundo: estrelas novas só na faixa nova, sem sortear as outras
+    const n = Math.round(L * (h - H) / (MODO === "cec" ? 1900 : MODO === "cmp" ? 2200 : 2800) * D);
+    for (let i = 0; i < n; i++) estrelas.push({ x: A(0, L), y: A(H, h), z: A(0.2, 1), a: A(0.25, 0.95), f: A(0.4, 1.8), p: A(0, 6.3) });
+    H = h; tela.height = H * dpr; tela.style.height = H + "px"; g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    quadro(calmo.matches || document.hidden ? 0 : performance.now());   // redesenha já, sem esperar o próximo quadro
   }
 
   function montar() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     L = innerWidth; H = altura();      // acima da altura de um monitor 4K (a janela do Google), o fundo para de crescer
-    tela.style.height = H + "px";      // a altura fica em pixels: não muda com a barra de endereço
+    tela.style.height = H + "px";      // a altura fica em pixels: não muda com as barras do navegador
     tela.width = L * dpr; tela.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0);
     const n = Math.round(L * H / (MODO === "cec" ? 1900 : MODO === "cmp" ? 2200 : 2800) * D);
     estrelas = Array.from({ length: n }, () => ({
@@ -598,10 +607,11 @@
     raf = requestAnimationFrame(ciclo);
   }
   let espera;
-  // no celular, a barra de endereço some e volta com o arraste do dedo e muda a altura da janela; o fundo já tem a altura
-  // da tela inteira: só é refeito quando o tamanho dele muda de verdade (ao virar o celular ou mudar a janela do computador)
+  // no celular, as barras do navegador somem e voltam com o arraste do dedo e mudam a altura da janela: o céu só é
+  // refeito quando a largura muda (ao virar o celular ou mudar a janela do computador); se só a altura crescer além do
+  // fundo, ele ganha estrelas na faixa nova, sem sortear as outras
   addEventListener("resize", () => { clearTimeout(espera); espera = setTimeout(() => {
-    if (innerWidth !== L || altura() !== H) { montar(); iniciar(); }
+    if (innerWidth !== L) { montar(); iniciar(); } else { const h = altura(); if (h > H) crescer(h); }
   }, 200); });
   document.addEventListener("visibilitychange", iniciar);
   if (calmo.addEventListener) calmo.addEventListener("change", iniciar);
