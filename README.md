@@ -16,9 +16,6 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
 | `senajg-com/` | Prévia do senajg.com, o site em inglês, nos endereços novos (as 8 páginas e a 404), montada pelo `tools/gen_site_en.py` (repositório privado) |
 | `rev51/` | Prévia da rev.51: a página principal com o fundo de estrelas e cometas na densidade 10, as bandeiras novas no seletor de língua e os livros em 2 e 2 nas janelas médias, e o Universos Paralelos com o subtítulo novo (duas páginas; as páginas em inglês estão na prévia `senajg-com/`) |
-| `fundo-celular/` | Teste do fundo de estrelas no celular (commits de teste da rev.52): as variantes A (preso ao topo da tela), B (preso à base) e C (preso ao meio), cada uma com a página principal em português e O Cristo Cósmico; a B e a C com a altura da tela inteira, desde o teste 3 |
-| `bandeiras/` | Teste das bandeiras novas (commit de teste da rev.52): a comparação das opções (três tamanhos, as cores dos EUA e a proporção do Reino Unido) e a página principal em português e O Cristo Cósmico em cada tamanho, com o fundo B |
-| `bandeiras-iguais/` | Teste das bandeiras iguais e dos botões iguais (commit de teste da rev.53): três opções de tamanho das bandeiras, com a página principal, O Cristo Cósmico e A Solução de Tudo na Vida em cada uma |
 
 As páginas têm `noindex` e não aparecem no Google. Nos testes de fundo, o conteúdo é a página principal original
 e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `rev39/`, `links/`,
@@ -33,6 +30,4 @@ Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d
 
 ## Versão
 
-Este laboratório acompanha a versão **v3.3.0** (SenaJG-rev.44) do site, de 28/10/2026.
-
-Em preparação: **v4.0.0**, desde a SenaJG-rev.45, de 29/10/2026, com o domínio internacional, senajg.com, para o site em inglês. A revisão mais recente é a SenaJG-rev.55, de 30/10/2026, com as páginas em inglês só no senajg.com e o seletor no meio das páginas de entrada; a prévia `senajg-com/` foi refeita. Antes, a SenaJG-rev.54, com as bandeiras do mesmo tamanho e os botões iguais; a SenaJG-rev.53, com o fundo B, as bandeiras oficiais, o English primeiro e o senajg.com no ar; e a SenaJG-rev.52, com os nomes finais das páginas em português do senajg.com.br; as prévias passaram a apontar para os endereços novos. Antes, a SenaJG-rev.51, com as prévias `senajg-com/` e `rev51/`.
+Este laboratório acompanha a versão **v4.0.0** (SenaJG-rev.58) do site, de 30/10/2026.
