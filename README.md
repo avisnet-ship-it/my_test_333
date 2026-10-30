@@ -24,7 +24,7 @@ e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório pr
 Os endereços do que vem do site (imagens, ícones e programas de `/assets/`, páginas dos livros) estão completos,
 `https://senajg.com.br/...`, porque a raiz do lab.senajg.com.br é a do laboratório. O ajuste é do
 `tools/lab_enderecos.py` (repositório privado). A prévia `senajg-com/` é a exceção: ela traz os próprios arquivos, com os
-endereços dentro da pasta (`/senajg-com/...`), como o site novo vai ter na raiz do senajg.com.
+endereços dentro da pasta (`/senajg-com/...`), como o site novo tem na raiz do senajg.com.
 
 Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d=2.5`, `?d=3`... na URL.
 
