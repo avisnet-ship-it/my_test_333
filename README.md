@@ -18,6 +18,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `rev51/` | Prévia da rev.51: a página principal com o fundo de estrelas e cometas na densidade 10, as bandeiras novas no seletor de língua e os livros em 2 e 2 nas janelas médias, e o Universos Paralelos com o subtítulo novo (duas páginas; as páginas em inglês estão na prévia `senajg-com/`) |
 | `fundo-celular/` | Teste do fundo de estrelas no celular (commits de teste da rev.52): as variantes A (preso ao topo da tela), B (preso à base) e C (preso ao meio), cada uma com a página principal em português e O Cristo Cósmico; a B e a C com a altura da tela inteira, desde o teste 3 |
 | `bandeiras/` | Teste das bandeiras novas (commit de teste da rev.52): a comparação das opções (três tamanhos, as cores dos EUA e a proporção do Reino Unido) e a página principal em português e O Cristo Cósmico em cada tamanho, com o fundo B |
+| `bandeiras-iguais/` | Teste das bandeiras iguais e dos botões iguais (commit de teste da rev.53): três opções de tamanho das bandeiras, com a página principal, O Cristo Cósmico e A Solução de Tudo na Vida em cada uma |
 
 As páginas têm `noindex` e não aparecem no Google. Nos testes de fundo, o conteúdo é a página principal original
 e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `rev39/`, `links/`,
