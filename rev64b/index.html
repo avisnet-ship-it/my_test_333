@@ -171,13 +171,13 @@
     .btn:hover { transform: translateY(-1px); }
     .livro .btn { margin-top: auto; } /* botões na mesma altura, mesmo quando um título quebra em duas linhas */
 
-    .autor-amazon { display: flex; justify-content: center; margin: -1.25rem 0 0.625rem; }
-    .autor-amazon + .divisor { margin-bottom: 0.5625rem; }   /* livros, Página do autor e o link do Cotidiano a 20 px um do outro (pedido do autor, rev.64) */
+    .autor-amazon { display: flex; justify-content: center; margin: 0 0 1rem; }
     .chip { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid rgba(241, 192, 59, 0.7); border-radius: 999px; color: var(--ouro); font-size: 0.95rem; font-weight: 700; text-decoration: none; }
     .chip:hover { background: rgba(241, 192, 59, 0.12); }
     .divisor { max-width: 40rem; margin: 0 auto 2.25rem; border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); }
     /* Livros seculares ficam numa página própria, aberta só por este botão */
-    .ir-cotidiano { display: flex; justify-content: center; margin: 0 0 1rem; }
+    .ir-cotidiano { display: flex; justify-content: center; margin: -2rem 0 0.625rem; }
+    .ir-cotidiano + .divisor { margin-bottom: 0.5625rem; }   /* embaixo dos livros, o link do Cotidiano a 8 px deles e a Página do autor 20 px abaixo do link (pedido do autor, rev.64) */
     .ir-cotidiano a {
       display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.75rem 1.4rem;
       border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 999px; background: rgba(255, 255, 255, 0.06);
@@ -292,13 +292,13 @@
       </ul>
     </section>
 
-    <div class="autor-amazon"><a class="chip" href="https://www.amazon.com.br/stores/Sena-JG/author/B0GCL39X52">Página do autor na Amazon</a></div>
-
-    <hr class="divisor">
-
     <nav class="ir-cotidiano" aria-label="Assuntos cotidianos — Finanças e Organização">
       <a href="/rev64b/cotidiano/">Assuntos cotidianos — Finanças e Organização</a>
     </nav>
+
+    <hr class="divisor">
+
+    <div class="autor-amazon"><a class="chip" href="https://www.amazon.com.br/stores/Sena-JG/author/B0GCL39X52">Página do autor na Amazon</a></div>
   </main>
 <script>
 /* Fundo cósmico — código próprio, sem bibliotecas. Respeita "reduzir movimento",
