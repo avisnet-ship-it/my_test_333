@@ -5,13 +5,17 @@
   <meta name="robots" content="noindex, nofollow">
   <script>
 // Medição da travada dos botões de metal (rev.63, laboratório). Roda antes de tudo na página e, 20 s depois, mostra os tempos.
+// ?metal=0 desliga os botões de metal (ficam os planos); ?fundo=0 desliga o fundo animado de estrelas.
 (function () {
+  const Q = new URLSearchParams(location.search), semMetal = Q.get('metal') === '0', semFundo = Q.get('fundo') === '0';
   const T0 = performance.now(), ctxs = [], longas = [];
   let maiorPausa = 0, quadroAnt = 0, metalPronto = 0;
   const reg = (gl) => { let r = ctxs.find(c => c.gl === gl); if (!r) { r = { gl, t: {}, n: ctxs.length + 1 }; ctxs.push(r); } return r; };
   const soma = (gl, k, d) => { const r = reg(gl); r.t[k] = (r.t[k] || 0) + d; };
   const gc = HTMLCanvasElement.prototype.getContext;
   HTMLCanvasElement.prototype.getContext = function (tipo, ...resto) {
+    if (semMetal && /webgl/.test(tipo)) return null;
+    if (semFundo && tipo === '2d' && this.id === 'cosmos') return null;
     const a = performance.now(); const c = gc.call(this, tipo, ...resto);
     if (c && /webgl/.test(tipo)) { const r = reg(c); r.t.criar = performance.now() - a; r.inicio = a - T0; }
     return c;
@@ -35,11 +39,12 @@
     if (cv) { const e = cv.getExtension('WEBGL_debug_renderer_info'); placa = e ? cv.getParameter(e.UNMASKED_RENDERER_WEBGL) : cv.getParameter(cv.RENDERER); paralelo = cv.getExtension('KHR_parallel_shader_compile') ? 'sim' : 'não'; }
     const fcp = (performance.getEntriesByName('first-contentful-paint')[0] || {}).startTime;
     const linhas = [
-      'MEDIÇÃO (rev.63) — ' + location.pathname,
+      'MEDIÇÃO (rev.63, v2) — ' + location.pathname + location.search + (semMetal ? '  [SEM METAL]' : '') + (semFundo ? '  [SEM FUNDO]' : ''),
       'Navegador: ' + navigator.userAgent.replace(/^Mozilla\/5\.0 /, ''),
       'Placa de vídeo: ' + placa + ' | tradução em segundo plano disponível: ' + paralelo,
       'Primeira pintura: ' + (fcp ? f(fcp) : '?') + ' | metal pronto (último botão): ' + f(metalPronto) + ' | maior pausa da tela: ' + f(maiorPausa),
-      'Travadas (tarefas longas): ' + longas.length + ', somando ' + f(longas.reduce((s, x) => s + x[1], 0)) + '; maior: ' + f(Math.max(0, ...longas.map(x => x[1]))),
+      'Travadas (tarefas longas): ' + longas.length + ', somando ' + f(longas.reduce((s, x) => s + x[1], 0)) + '; maior: ' + f(Math.max(0, ...longas.map(x => x[1]))) + (longas.length ? ' (começou em ' + f(longas.reduce((a, b) => b[1] > a[1] ? b : a)[0]) + ')' : ''),
+      'Página pronta (DOMContentLoaded / load): ' + f(performance.getEntriesByType('navigation')[0].domContentLoadedEventEnd) + ' / ' + f(performance.getEntriesByType('navigation')[0].loadEventEnd),
       'Por botão (ms): criar | traduzir* | conferir tradução | ligar programa | conferir programa | imagens | 1º desenho em',
     ];
     for (const r of ctxs) { const t = r.t; linhas.push(`  ${r.n}: ${f(t.criar || 0)} | ${f(t.compileShader || 0)} | ${f(t.getShaderParameter || 0)} | ${f(t.linkProgram || 0)} | ${f(t.getProgramParameter || 0)} | ${f(t.texImage2D || 0)} | ${r.primeiroDesenho ? f(r.primeiroDesenho) : '-'}`); }
