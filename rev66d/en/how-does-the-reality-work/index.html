@@ -234,6 +234,11 @@
     /* How does The Reality work?: o seletor igual ao da página em português (o amarelo mais suave, #ffe600, escolha do autor) */
     :root { --idioma-borda: rgba(255, 255, 255, 0.55); --idioma-fundo: transparent; --idioma-ativo: #ffe600; }
   </style>
+  <style>
+    /* rev66d: a linha do contato com o dobro do tamanho (de 0,8rem para 1,6rem), pedido do autor; só a partir de 800 px (abaixo disso, não cabe numa linha ao lado do seletor): no
+       celular, ela divide a linha com o seletor de língua e não cabe (quebraria em duas linhas, com rolagem lateral) */
+    @media (min-width: 800px) { .marca-bloco .contato { font-size: 1.6rem; } }
+  </style>
   <script src="/rev66d/assets/fundo.js" defer></script>
 </head>
 <body>
