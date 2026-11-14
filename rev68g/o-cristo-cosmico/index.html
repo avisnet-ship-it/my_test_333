@@ -409,6 +409,11 @@
     .video-play:focus-visible { outline: 3px solid var(--ciano); outline-offset: -3px; }
     .video-legenda { margin: 0.9rem 0 0; text-align: center; font-size: 0.95rem; color: var(--texto-suave); }
     .video-legenda a { color: var(--ciano); }
+      /* o título do trailer, quando não cabe numa linha, quebra antes de "e entenda" / "and understand" (decisão do autor) */
+    #titulo-video .parte { display: inline-block; }
+    /* no celular a letra diminui um pouco, para cada parte caber numa linha, e as linhas dos lados saem (como no título
+       da série); fora do celular, quando o título quebra em duas linhas, as linhas douradas dos lados também somem */
+    @media (max-width: 520px) { #titulo-video { font-size: min(1.6rem, 5.6vw); } #titulo-video::before, #titulo-video::after { display: none; } }
   </style>
 </head>
 <body>
@@ -467,7 +472,7 @@
 
   <main>
     <section class="video" aria-labelledby="titulo-video">
-      <h2 id="titulo-video">Veja o pequeno trecho e entenda o livro</h2>
+      <h2 id="titulo-video"><span class="texto"><span class="parte">Veja o pequeno Trailer</span> <span class="parte">e entenda o Livro</span></span></h2>
       <div class="video-quadro" data-video="ilPsQkvPU5w" data-titulo="O Cristo Cósmico — Quem ficará na Nova Terra (filme, 3 min)">
         <button type="button" class="video-play" aria-label="Ver o trailer: O Cristo Cósmico — Quem ficará na Nova Terra (filme, 3 min)">
           <img src="assets/video-capa-1280.webp" srcset="assets/video-capa-640.webp 640w, assets/video-capa-1280.webp 1280w" sizes="(max-width: 800px) 100vw, 48rem" width="1280" height="720" alt="Capa do filme: uma estrela de oito pontas em luz azul e verde, sobre o espaço escuro." loading="lazy" decoding="async">

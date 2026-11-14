@@ -418,6 +418,11 @@
     .video-play:focus-visible { outline: 3px solid var(--ciano); outline-offset: -3px; }
     .video-legenda { margin: 0.9rem 0 0; text-align: center; font-size: 0.95rem; color: var(--texto-suave); }
     .video-legenda a { color: var(--ciano); }
+      /* o título do trailer, quando não cabe numa linha, quebra antes de "e entenda" / "and understand" (decisão do autor) */
+    #titulo-video .parte { display: inline-block; }
+    /* no celular a letra diminui um pouco, para cada parte caber numa linha, e as linhas dos lados saem (como no título
+       da série); fora do celular, quando o título quebra em duas linhas, as linhas douradas dos lados também somem */
+    @media (max-width: 520px) { #titulo-video { font-size: min(1.6rem, 5.6vw); } #titulo-video::before, #titulo-video::after { display: none; } }
   </style>
 </head>
 <body>
@@ -476,7 +481,7 @@
 
   <main>
     <section class="video" aria-labelledby="titulo-video">
-      <h2 id="titulo-video">Watch the short clip and understand the book</h2>
+      <h2 id="titulo-video"><span class="texto"><span class="parte">Watch the short Trailer</span> <span class="parte">and understand the Book</span></span></h2>
       <div class="video-quadro" data-video="meW_ruIMXqA" data-titulo="The Cosmic Christ — Who Will Remain on the New Earth (film, 3 min)">
         <button type="button" class="video-play" aria-label="Watch the trailer: The Cosmic Christ — Who Will Remain on the New Earth (film, 3 min)">
           <img src="assets/video-capa-1280.webp" srcset="assets/video-capa-640.webp 640w, assets/video-capa-1280.webp 1280w" sizes="(max-width: 800px) 100vw, 48rem" width="1280" height="720" alt="Film cover: an eight-pointed star in blue and green light, over dark space." loading="lazy" decoding="async">
