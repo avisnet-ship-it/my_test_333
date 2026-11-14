@@ -239,6 +239,8 @@
        celular, ela divide a linha com o seletor de língua e não cabe (quebraria em duas linhas, com rolagem lateral) */
     @media (min-width: 820px) { .marca-bloco .contato { font-size: 1.6rem; } }
     .marca-bloco .contato, .marca-bloco .contato a { font-weight: 700; }   /* o contato e o e-mail em negrito (pedido do autor) */
+    /* o contato na mesma linha do "Sena JG", logo depois dele (pedido do autor), a partir de 920 px (abaixo disso, não cabe ao lado do seletor e fica embaixo do nome) */
+    @media (min-width: 920px) { .marca-bloco { flex-direction: row; align-items: baseline; column-gap: 0.9rem; } .marca-bloco .contato { margin: 0; white-space: nowrap; } }
   </style>
   <script src="/rev66d/assets/fundo.js" defer></script>
 </head>
