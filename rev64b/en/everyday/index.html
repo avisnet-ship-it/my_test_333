@@ -94,7 +94,7 @@
     a:focus-visible { outline: 3px solid var(--ouro); outline-offset: 4px; }
 
     .barra { display: flex; justify-content: center; max-width: 72rem; margin: 0 auto; padding: 0.9rem 1.25rem 0; }   /* o seletor no meio (pedido do autor, rev.55) */
-    @media (min-width: 1120px) { .barra { position: relative; height: 0; padding: 0 1.25rem; } .barra .idiomas { position: absolute; top: 0.9rem; right: 1.25rem; } }   /* no computador, o seletor à direita, e o título sobe para a altura dele (pedido do autor, rev.64); nas telas menores, no meio, acima do título */
+    @media (min-width: 760px) { .barra { position: relative; height: 0; padding: 0 1.25rem; } .barra .idiomas { position: absolute; top: 0.9rem; right: 1.25rem; } }   /* no computador, o seletor à direita, e o título sobe para a altura dele (pedido do autor, rev.64); abaixo de 760 px, como no celular, no meio, acima do título; com o título à esquerda, a partir de 760 px já não há encontro com o seletor */
     /* os dois botões do seletor do mesmo tamanho, com o nome da língua no meio, entre as duas bandeiras (pedido do autor, rev.51) */
     .idiomas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem; }   /* colunas sempre iguais (rev.54) */
     .idiomas a { justify-content: space-between; }
@@ -158,7 +158,8 @@
     .btn:hover { transform: translateY(-1px); }
     .livro .btn { margin-top: auto; } /* botões na mesma altura, mesmo quando um título quebra em duas linhas */
 
-    .autor-amazon { display: flex; justify-content: center; margin: -0.5rem 0 2.5rem; }
+    .autor-amazon { display: flex; justify-content: center; margin: -1.25rem 0 0.625rem; }
+    .autor-amazon + .divisor { margin-bottom: 0.5625rem; }   /* livros, Página do autor e o link do Cotidiano a 20 px um do outro (pedido do autor, rev.64) */
     .chip { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid rgba(241, 192, 59, 0.7); border-radius: 999px; color: var(--ouro); font-size: 0.95rem; font-weight: 700; text-decoration: none; }
     .chip:hover { background: rgba(241, 192, 59, 0.12); }
     .divisor { max-width: 40rem; margin: 0 auto 2.25rem; border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); }
@@ -179,7 +180,7 @@
     .voltar .seta { width: 1.89em; height: 1.26em; vertical-align: -0.27em; width: 2.625cap; height: 1.75cap; vertical-align: -0.375cap; margin-right: 0.45em; overflow: visible; transform-origin: 50% 50%; }
     .voltar .seta.gira g { filter: none; }
     .marca:hover, .marca:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px; background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent); }
-    @media (min-width: 1120px) { .pagina > h1 { text-align: left; } }
+    @media (min-width: 760px) { .pagina > h1 { text-align: left; } }
     .btn-cristo { background: #a9502a; color: #fff; }
     .btn-universos { background: #ffe600; color: #1a0050; }
     .btn-solucao { background: #1a3cb4; color: #fff; }
