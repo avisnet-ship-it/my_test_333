@@ -14,6 +14,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
 | `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
+| `idiomas-c/` | Seletor de língua, versão C (ideia do autor): a prévia rev64b com cada botão da altura das bandeiras, o fundo só entre elas, atrás do nome |
 | `idiomas-a/` | Seletor de língua, versão A: a prévia rev64b com só as 4 bandeiras, sem cápsula, e um traço dourado na língua da página |
 | `idiomas-b/` | Seletor de língua, versão B: a prévia rev64b com o seletor numa barra única dividida em duas, a língua da página preenchida |
 | `rev64b/` | Prévia da rev.64: o contato na mesma linha do subtítulo e, nos quatro livros da série Ganhe Dinheiro / Make Money, sem a linha da série abaixo do autor (as 8 páginas de cada site) |
