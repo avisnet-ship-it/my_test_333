@@ -14,6 +14,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
 | `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
+| `rev68b/` | Prévia da rev.68, versão B (cruzada): o vídeo entre a capa e a Descrição, com o título, a luz da capa e a legenda da proposta de outra sessão, e a fachada da rev68 |
 | `rev68/` | Prévia da rev.68: o vídeo do livro (YouTube, com fachada) logo abaixo dos botões de compra do topo nas duas páginas do Cristo |
 | `rev67/` | Prévia da rev.67: as 16 páginas e a página nova em italiano de How does The Reality work? (em rev67/en/come-funziona-la-realta/), com o seletor de três línguas nas três páginas desse livro |
 | `rev66d/` | Prévia da rev.66, versão D: a rev66b com, nas duas Realidades, os universos-bolha se revezando a 75% (fusão comum, uma troca a cada 3 s) e a matriz de cubos de metal azul por cima; na página em português, a coluna da esquerda com o mesmo quadro translúcido da direita |
