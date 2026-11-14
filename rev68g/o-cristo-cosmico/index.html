@@ -411,6 +411,9 @@
     .video-legenda a { color: var(--ciano); }
       /* o título do trailer, quando não cabe numa linha, quebra antes de "e entenda" / "and understand" (decisão do autor) */
     #titulo-video .parte { display: inline-block; }
+    /* fora do celular e do tablet, a seção do trailer fica mais larga (o vídeo continua com 25vw), para o título caber numa
+       linha sempre que a tela tiver espaço; ele só quebra quando não cabe */
+    @media (min-width: 861px) { .video { max-width: 60rem; } }
     /* no celular a letra diminui um pouco, para cada parte caber numa linha, e as linhas dos lados saem (como no título
        da série); fora do celular, quando o título quebra em duas linhas, as linhas douradas dos lados também somem */
     @media (max-width: 520px) { #titulo-video { font-size: min(1.6rem, 5.6vw); } #titulo-video::before, #titulo-video::after { display: none; } }
