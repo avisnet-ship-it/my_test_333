@@ -14,6 +14,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
 | `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
+| `rev64/` | Prévia da rev.64: o metal sem travar a página (começa depois da carga e espera a placa de vídeo sem travar); as três páginas da medição, com o mesmo medidor |
 | `rev63/` | Medição da travada dos botões de metal: três páginas do senajg.com.br com um medidor que mostra, 20 s depois de abrir, os tempos de cada etapa do metal |
 | `rev62/` | Prévia da rev.62: o e-mail de contato abaixo do "Sena JG" do topo e nos dados do autor (as 8 páginas do senajg.com.br e, em `rev62/en/`, as 8 do senajg.com) |
 | `rev61/` | Prévia da rev.61: os botões de metal só com placa de vídeo; sem ela (como no teste ao vivo do Search Console), os botões planos de antes (as 8 páginas do senajg.com.br) |
