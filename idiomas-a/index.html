@@ -190,6 +190,7 @@
     @media (prefers-reduced-motion: reduce) { .btn, .livro img { transition: none; } .btn:hover, .livro:hover a.capa img { transform: none; } }
     @media (prefers-reduced-motion: reduce) { .livro:has(:focus-visible) a.capa img { transform: none; } }
     @media (min-width: 760px) { .pagina > h1 { text-align: left; } }
+    .sub-nicho { margin-top: 0; }
     .btn-cristo { background: #a9502a; color: #fff; }
     .btn-universos { background: #ffe600; color: #1a0050; }
     .btn-solucao { background: #1a3cb4; color: #fff; }
@@ -208,6 +209,7 @@
     .contato a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
     .sub-linha { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 1.25em; row-gap: 0.25rem; margin: 0.5rem 0 0.875rem; }
     .sub-linha .sub, .sub-linha .contato { margin: 0; }
+    @media (min-width: 1060px) { .pagina { position: relative; } .pagina > .sub-linha { position: absolute; top: 1.4rem; left: 50%; transform: translateX(-50%); flex-direction: column; align-items: center; row-gap: 0.1rem; margin: 0; white-space: nowrap; } }
     .marca-bloco { display: flex; flex-direction: column; align-items: flex-start; }
     .marca-bloco .contato { margin: 0.1rem 0 0; font-size: 0.8rem; text-align: left; }
   </style>
