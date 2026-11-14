@@ -209,6 +209,7 @@
     .marca:hover, .marca:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-radius: 6px; background: color-mix(in srgb, currentColor 16%, transparent); box-shadow: 0 0 0 6px color-mix(in srgb, currentColor 16%, transparent); }
 
     @media (max-width: 860px) { .livro { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 0.5rem; } .capa { max-width: var(--capa-max-celular); } }
+    @media (min-width: 861px) { .livro { align-items: start; padding-top: 0.25rem; } }
     .compra-final { display: none; }
     @media (max-width: 860px) { .compra-final { display: grid; margin: 0 auto 2rem; } }
     @media (max-width: 420px) { .idiomas span { display: none; } .idiomas a { padding: 0.4rem 0.55rem; } }
