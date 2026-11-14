@@ -14,7 +14,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
 | `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
-| `rev66d/` | Prévia da rev.66, versão D: a rev66b com, nas duas Realidades, os universos-bolha se revezando a 75% (fusão comum, uma troca a cada 3 s) e a matriz de cubos de metal azul por cima |
+| `rev66d/` | Prévia da rev.66, versão D: a rev66b com, nas duas Realidades, os universos-bolha se revezando a 75% (fusão comum, uma troca a cada 3 s) e a matriz de cubos de metal azul por cima; na página em português, a coluna da esquerda com o mesmo quadro translúcido da direita |
 | `rev66b/` | Prévia da rev.66, versão B: a rev66 com a faixa do topo das duas Realidades na mesma largura (1152 px), sobras e altura de linha |
 | `rev66c/` | Prévia da rev.66, versão C (ideia do autor): a rev66 com o seletor de língua no meio da faixa do topo das duas Realidades |
 | `rev66/` | Prévia da rev.66: o seletor de língua com o mesmo estilo nas 16 páginas (a mesma fonte, peso, altura e sobras; as cores de cada página), toda navegável dentro do laboratório |
