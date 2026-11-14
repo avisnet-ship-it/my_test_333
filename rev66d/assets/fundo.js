@@ -3,17 +3,19 @@
 // cada um girado ao acaso), desenhada uma vez e publicada como imagem. Tudo começa depois que a página carregou; com
 // "reduzir movimento", fica uma imagem só, parada.
 // As duas camadas ficam na altura -1, como o degradê da página em português (body::before), e depois dele na ordem da
-// página: o degradê, as bolhas, os cubos. Na troca, a imagem nova aparece por cima da anterior, que só sai quando a nova
-// está completa (assim o fundo original não aparece mais forte no meio da troca).
+// página: o degradê, as bolhas, os cubos. A caixa das bolhas inteira fica a 75%, e as imagens dentro dela a 100%: na troca,
+// a nova dissolve por cima da anterior dentro da caixa, e a anterior só sai quando a dissolução termina. Assim a cobertura
+// é sempre 75%, durante e depois da troca (com as duas imagens a 75% cada uma, a cobertura subia para 94% na troca e caía
+// de uma vez para 75% quando a anterior saía: o fundo original piscava).
 (function () {
   const base = document.currentScript.src.replace(/fundo\.js.*$/, '');
   const BOLHAS = ['bolhas-4.webp', 'bolhas-2.webp', 'bolhas-1.webp'].map(f => base + f), TROCA = 3000, DISSOLVE = 1000, FORCA = 0.75;   // uma troca a cada 3 s (pedido do autor), dissolvendo em 1 s
   const st = document.createElement('style');
   st.textContent = `
-    #fundo-bolhas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+    #fundo-bolhas { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: ${FORCA}; }
     #fundo-bolhas > div { position: absolute; inset: 0; background: center / cover no-repeat; opacity: 0; }
     #fundo-bolhas > div.entra { transition: opacity ${DISSOLVE / 1000}s ease; }
-    #fundo-bolhas > div.ativa { opacity: ${FORCA}; }
+    #fundo-bolhas > div.ativa { opacity: 1; }
     #fundo-cubos { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: center / 3000px 1700px no-repeat; opacity: 0; transition: opacity 1.2s ease; }
     #fundo-cubos.ativa { opacity: 1; }
     @media (prefers-reduced-motion: reduce) { #fundo-bolhas > div.entra, #fundo-cubos { transition: none; } }`;
@@ -29,7 +31,10 @@
       const nova = document.createElement('div'); nova.className = 'entra'; nova.style.backgroundImage = `url("${src}")`;
       caixa.appendChild(nova); void nova.offsetWidth; nova.classList.add('ativa');   // a nova por cima, dissolvendo
       const velha = atual; atual = nova;
-      if (velha) setTimeout(() => velha.remove(), parado ? 0 : DISSOLVE + 100);
+      if (!velha) return;
+      if (parado) { velha.remove(); return; }
+      let feito = false; const tira = () => { if (!feito) { feito = true; velha.remove(); } };
+      nova.addEventListener('transitionend', tira, { once: true }); setTimeout(tira, DISSOLVE + 500);   // a reserva, se o evento não vier
     };
     carrega(BOLHAS[0]).then(mostra).then(() => carrega(base + 'cubos.webp')).then(src => { cubos.style.backgroundImage = `url("${src}")`; cubos.classList.add('ativa'); }).catch(() => {});
     if (!parado) setInterval(() => { n = (n + 1) % BOLHAS.length; carrega(BOLHAS[n]).then(mostra).catch(() => {}); }, TROCA);
