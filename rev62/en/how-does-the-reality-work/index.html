@@ -217,8 +217,10 @@
   <script src="https://senajg.com/assets/aco-escovado.js" defer data-paleta='{"ceu":"#3a3fd0","meio":"#2f7fe6","horizonte":"#ffc23a","montanha":"#7d8aa8","chao":"#2f7a1f","chave":"#fff2c0","faixa":"#5fe8c0","quente":"#ff8a5a","acento":"#2fd0a0","metal":"#f2f0f4","psi":1,"brilho":1.1,"liso":1,"onda":0.09,"relevo":1.7}'></script>
   <script src="https://senajg.com/assets/seta-voltar.js" defer></script>
   <style>
-    .contato { position: relative; z-index: 1; margin: 0 auto; padding: 0.25rem 1rem 1.5rem; text-align: center; font-size: 0.85rem; opacity: 0.85; }
+    .contato { margin: 0.35rem auto 0; font-size: 0.85rem; opacity: 0.85; }
     .contato a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+    .marca-bloco { display: flex; flex-direction: column; align-items: flex-start; }
+    .marca-bloco .contato { margin: 0.1rem 0 0; font-size: 0.8rem; text-align: left; }
   </style>
 </head>
 <body>
@@ -232,7 +234,10 @@
   </defs>
 </svg>
   <header class="barra">
-    <a class="marca" href="/rev62/en/">Sena JG</a>
+    <div class="marca-bloco">
+      <a class="marca" href="/rev62/en/">Sena JG</a>
+      <p class="contato">Contact: <a href="mailto:contact@senajg.com">contact@senajg.com</a></p>
+    </div>
     <nav class="idiomas" aria-label="Language">
       <a href="./" hreflang="en" lang="en" aria-current="page">
         <svg class="bandeira us" aria-hidden="true"><use href="#flag-us"/></svg>
@@ -326,6 +331,5 @@
   <footer class="rodape">
     <a class="chip" href="/rev62/en/"><svg class="seta" viewBox="0 0 30 20" aria-hidden="true"><defs><linearGradient id="seta-cima" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffc7"/><stop offset=".45" stop-color="#ffff40"/><stop offset="1" stop-color="#ebeb00"/></linearGradient><linearGradient id="seta-baixo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#737300"/><stop offset=".35" stop-color="#606031"/><stop offset=".75" stop-color="#a6a62e"/><stop offset="1" stop-color="#ffff66"/></linearGradient><linearGradient id="seta-crista" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".7" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="seta-borda" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".55" stop-color="#ffff33" stop-opacity=".45"/><stop offset="1" stop-color="#595900" stop-opacity=".95"/></linearGradient><filter id="seta-sombra" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy=".8" stdDeviation=".7" flood-color="#000" flood-opacity=".5"/></filter></defs><g filter="url(#seta-sombra)"><path d="M3.4 8.6Q13.6 2.2 29.4 0.9C24.6 3.5 21.6 7.1 19.4 10L1.35 10Q1.6 9.2 3.4 8.6Z" fill="url(#seta-cima)"/><path d="M1.35 10L19.4 10C21.6 12.9 24.6 16.5 29.4 19.1Q13.6 17.8 3.4 11.4Q1.6 10.8 1.35 10Z" fill="url(#seta-baixo)"/></g><path d="M2.2 10L19.4 10" stroke="url(#seta-crista)" stroke-width=".45" stroke-linecap="round"/><path d="M3.4 8.6Q13.6 2.2 29.4 0.9C24.6 3.5 21.6 7.1 19.4 10C21.6 12.9 24.6 16.5 29.4 19.1Q13.6 17.8 3.4 11.4Q0.6 10 3.4 8.6Z" fill="none" stroke="url(#seta-borda)" stroke-width=".5" stroke-linejoin="miter" stroke-miterlimit="14"/></svg><span>Back</span></a>
   </footer>
-  <p class="contato">Contact: <a href="mailto:contact@senajg.com">contact@senajg.com</a></p>
 </body>
 </html>
