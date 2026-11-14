@@ -203,20 +203,13 @@
     /* preso à base da tela, com a altura da tela inteira: no celular, as barras do navegador somem e voltam sem mexer no céu (rev.53) */
     #cosmos { position: fixed; left: 0; bottom: 0; width: 100%; height: 100vh; height: 100lvh; max-height: 2160px; z-index: -1; pointer-events: none; }
       /* a linha do trailer no card de O Cristo Cósmico (rev.68): apagada como a linha do autor, coberta pelo link do título
-       (fica dourada junto com ele) e com a marca de play do YouTube; com os 4 livros numa linha, os cards dividem as
-       linhas da grade (subgrid), para a linha do trailer ficar na mesma altura da linha do autor do outro card, mesmo
-       quando um título quebra em duas linhas */
+       (fica dourada junto com ele) e com a marca de play do YouTube, logo abaixo do título; em português são duas linhas,
+       mas o card conta só uma (margem de baixo menor), para a fileira não ficar mais alta e o que vem embaixo não descer */
     .trailer { margin: 0 0 0.8rem; color: var(--texto-suave); line-height: 1.5; }
     .trailer .yt { display: inline-block; width: 1.25em; height: 0.9em; margin: 0 0.15em; vertical-align: -0.1em; }
+    .trailer.duas { margin-bottom: calc(0.8rem - 1.5em); }
     .livro:hover .obra .trailer { color: var(--ouro); }
     .livro:has(:focus-visible) .obra .trailer { color: var(--ouro); }
-    @supports (grid-template-rows: subgrid) {
-      @media (min-width: 60.0625rem) {
-        .livros.n4 .livro { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; justify-items: center; align-content: start; }
-        .livros.n4 .livro .obra { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 0; align-content: start; }
-        .livros.n4 .livro .obra h3 { align-self: start; }
-      }
-    }
   </style>
   <script src="https://senajg.com.br/assets/aco-escovado.js" defer data-paleta='{"ceu":"#000052","meio":"#1f8f8a","horizonte":"#f6e7c1","montanha":"#2a1446","chao":"#3a0f2e","chave":"#ffffff","faixa":"#9ff0ea","quente":"#f1c03b","acento":"#e0337f"}'></script>
   <style>
@@ -279,7 +272,7 @@
           </picture>
         </a>
         <div class="obra"><h3><a href="/rev68g/o-cristo-cosmico/">O Cristo Cósmico</a></h3>
-        <p class="trailer">Contém vídeo<br><svg class="yt" viewBox="0 0 28 20" aria-hidden="true" focusable="false"><rect width="28" height="20" rx="5" fill="#f00"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg> trailer</p></div>
+        <p class="trailer duas">Contém vídeo<br><svg class="yt" viewBox="0 0 28 20" aria-hidden="true" focusable="false"><rect width="28" height="20" rx="5" fill="#f00"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg> trailer</p></div>
       </li>
       <li class="livro">
         <a class="btn btn-celeiro" href="/rev68g/o-celeiro-dessa-vida/" aria-label="Conheça o livro O Celeiro dessa Vida">Conheça o livro</a>
