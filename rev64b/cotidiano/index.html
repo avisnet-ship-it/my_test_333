@@ -94,6 +94,7 @@
     a:focus-visible { outline: 3px solid var(--ouro); outline-offset: 4px; }
 
     .barra { display: flex; justify-content: center; max-width: 72rem; margin: 0 auto; padding: 0.9rem 1.25rem 0; }   /* o seletor no meio (pedido do autor, rev.55) */
+    @media (min-width: 1120px) { .barra { position: relative; height: 0; padding: 0 1.25rem; } .barra .idiomas { position: absolute; top: 0.9rem; right: 1.25rem; } }   /* no computador, o seletor à direita, e o título sobe para a altura dele (pedido do autor, rev.64); nas telas menores, no meio, acima do título */
     /* os dois botões do seletor do mesmo tamanho, com o nome da língua no meio, entre as duas bandeiras (pedido do autor, rev.51) */
     .idiomas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem; }   /* colunas sempre iguais (rev.54) */
     .idiomas a { justify-content: space-between; }
