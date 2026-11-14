@@ -14,6 +14,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
 | `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
 | `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
+| `rev68f/` | Prévia da rev.68, versão F: a rev68e com mais espaço acima da capa e mais luz para cima, a aura também no alto |
 | `rev68e/` | Prévia da rev.68, versão E: a rev68d com o vídeo chamado de trailer e a luz da capa na proporção do tamanho dela |
 | `rev68d/` | Prévia da rev.68, versão D: a rev68c com o vídeo na metade do tamanho e a capa do livro com a mesma luz do vídeo |
 | `rev68c/` | Prévia da rev.68, versão C: a rev68b sem o link para o YouTube, com a luz em volta do quadro todo, o quadro com metade da largura no computador, "Veja o pequeno trecho e entenda o livro" e "Sinopse do Livro" |
