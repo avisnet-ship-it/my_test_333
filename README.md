@@ -10,10 +10,8 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `cmp/` | Cosmos Completo: estrelas + cometas + bolhas galácticas |
 | `cri/` | O Cristo Cósmico (pt) com estrelas e cometas ×7, sem bolhas |
 | `cri-en/` | The Cosmic Christ (en), idem |
-| `rev39/` | Prévia da rev.39: os botões do Kindle com a cidade e a águia em fotos (quatro páginas) |
-| `links/` | Prévia da rev.40 e da rev.41: o site com os títulos dos livros como links, o "Sena JG" com destaque e o cifrão novo no ícone |
-| `autor-a/` | Prévia A da rev.42: o autor no mesmo link do título, sublinhado junto (as 16 páginas) |
-| `autor-b/` | Prévia B da rev.42, a escolhida: o autor no mesmo link do título, sem sublinhado (as 16 páginas) |
+| `rev68h/` | Prévia da rev.68, versão H: a rev68g com a quarta imagem de universos-bolha no revezamento das três páginas da Realidade (aprovada e publicada na rev.68) |
+| `rev68g/` | Prévia da rev.68, versão G: a linha do trailer no card de O Cristo Cósmico das páginas principais e o título "Veja o pequeno Trailer e entenda o Livro" / "Watch the short Trailer and understand the Book" (aprovada e publicada na rev.68) |
 | `rev68f/` | Prévia da rev.68, versão F: a rev68e com mais espaço acima da capa e mais luz para cima, a aura também no alto |
 | `rev68e/` | Prévia da rev.68, versão E: a rev68d com o vídeo chamado de trailer e a luz da capa na proporção do tamanho dela |
 | `rev68d/` | Prévia da rev.68, versão D: a rev68c com o vídeo na metade do tamanho e a capa do livro com a mesma luz do vídeo |
@@ -33,17 +31,16 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `rev63/` | Medição da travada dos botões de metal: três páginas do senajg.com.br com um medidor que mostra, 20 s depois de abrir, os tempos de cada etapa do metal |
 | `rev62/` | Prévia da rev.62: o e-mail de contato abaixo do "Sena JG" do topo e nos dados do autor (as 8 páginas do senajg.com.br e, em `rev62/en/`, as 8 do senajg.com) |
 | `rev61/` | Prévia da rev.61: os botões de metal só com placa de vídeo; sem ela (como no teste ao vivo do Search Console), os botões planos de antes (as 8 páginas do senajg.com.br) |
-| `senajg-com/` | Prévia do senajg.com, o site em inglês, nos endereços novos (as 8 páginas e a 404), montada pelo `tools/gen_site_en.py` (repositório privado) |
-| `rev51/` | Prévia da rev.51: a página principal com o fundo de estrelas e cometas na densidade 10, as bandeiras novas no seletor de língua e os livros em 2 e 2 nas janelas médias, e o Universos Paralelos com o subtítulo novo (duas páginas; as páginas em inglês estão na prévia `senajg-com/`) |
 
 As páginas têm `noindex` e não aparecem no Google. Nos testes de fundo, o conteúdo é a página principal original
-e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `rev39/`, `links/`,
-`autor-a/`, `autor-b/`, `rev51/`, `rev61/` e `rev62/` são cópias dos sites, montadas para o autor testar antes de aprovar.
+e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `revNN/` são cópias dos sites,
+montadas para o autor testar antes de aprovar; como montar uma está no `docs/runbook.md` do privado. As prévias de antes da v4.0.0
+(`rev39/`, `links/`, `autor-a/`, `autor-b/`, `rev51/` e `senajg-com/`) saíram na SenaJG-rev.69 (15/11/2026), por decisão do autor;
+o histórico delas continua no Git deste repositório.
 
 Os endereços do que vem do site (imagens, ícones e programas de `/assets/`, páginas dos livros) estão completos,
 `https://senajg.com.br/...`, porque a raiz do lab.senajg.com.br é a do laboratório. O ajuste é do
-`tools/lab_enderecos.py` (repositório privado). A prévia `senajg-com/` é a exceção: ela traz os próprios arquivos, com os
-endereços dentro da pasta (`/senajg-com/...`), como o site novo tem na raiz do senajg.com.
+`tools/lab_enderecos.py` (repositório privado); os links entre as páginas de uma prévia ficam dentro do laboratório.
 
 Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d=2.5`, `?d=3`... na URL.
 
