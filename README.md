@@ -10,6 +10,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `cmp/` | Cosmos Completo: estrelas + cometas + bolhas galácticas |
 | `cri/` | O Cristo Cósmico (pt) com estrelas e cometas ×7, sem bolhas |
 | `cri-en/` | The Cosmic Christ (en), idem |
+| `rev77/` | Medição da velocidade: as 17 páginas dos dois sites, iguais às do ar, com um medidor que mostra, 20 s depois de abrir, as travadas, a maior pausa da tela, os quadros por segundo, o tempo sem responder, quando o metal ficou pronto e a placa de vídeo, com um botão para copiar; chaves `?metal=0`, `?fundo=0` (o céu ou as bolhas), `?blur=0` e `?d=` (as estrelas) |
 | `rev68h/` | Prévia da rev.68, versão H: a rev68g com a quarta imagem de universos-bolha no revezamento das três páginas da Realidade (aprovada e publicada na rev.68) |
 | `rev68g/` | Prévia da rev.68, versão G: a linha do trailer no card de O Cristo Cósmico das páginas principais e o título "Veja o pequeno Trailer e entenda o Livro" / "Watch the short Trailer and understand the Book" (aprovada e publicada na rev.68) |
 | `rev68f/` | Prévia da rev.68, versão F: a rev68e com mais espaço acima da capa e mais luz para cima, a aura também no alto |
