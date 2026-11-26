@@ -50,4 +50,4 @@ Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d
 
 ## Versão
 
-Este laboratório acompanha a versão **v4.3.1** (SenaJG-rev.80) do site, de 26/11/2026. O processo de versão (tags, branches e Releases) está no `VERSIONING.md` do repositório privado do projeto, `avisnet-ship-it/privado`; o `CLAUDE.md` daqui lembra o Claude de lê-lo antes de agir.
+Este laboratório acompanha a versão **v4.3.1** (SenaJG-rev.81) do site, de 26/11/2026. O processo de versão (tags, branches e Releases) está no `VERSIONING.md` do repositório privado do projeto, `avisnet-ship-it/privado`; o `CLAUDE.md` daqui lembra o Claude de lê-lo antes de agir.
