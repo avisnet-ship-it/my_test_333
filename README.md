@@ -10,6 +10,7 @@ Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com
 | `cmp/` | Cosmos Completo: estrelas + cometas + bolhas galácticas |
 | `cri/` | O Cristo Cósmico (pt) com estrelas e cometas ×7, sem bolhas |
 | `cri-en/` | The Cosmic Christ (en), idem |
+| `rev82/` | As listas dos sites, como estão hoje: as 17 páginas dos dois sites, iguais às do ar em 26/11/2026, sem nenhuma mudança, e o guia `rev82/listas/`, com as 12 páginas que têm listas visíveis, o que pode mudar com a regra 16 (listas numeradas). |
 | `rev78b/` | Prévia do metal leve: as 17 páginas dos dois sites, com a paisagem refletida pelos botões lida de uma imagem por estilo (as `assets/cena-*.webp`, em `_novos/`), e não calculada na hora; com o medidor da `rev77/` (aprovada e publicada na rev.78) |
 | `rev78/` | Teste do preparo do programa do metal, 2ª rodada: como a `rev77b/`, em três versões (o cenário do reflexo lido de uma imagem; o mesmo sem o ruído dos riscos do aço; a de hoje), com um botão para copiar |
 | `rev77b/` | Teste do preparo do programa do metal: sem botões, prepara o programa dos botões de metal em quatro versões, uma de cada vez (a de hoje; sem as 13 repetições do reflexo; com as repetições, sem as fotos; com as fotos lidas num nível fixo), e mostra quanto cada uma leva, com um botão para copiar |
