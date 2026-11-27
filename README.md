@@ -1,55 +1,106 @@
-# my_test_333 — laboratório de testes, em lab.senajg.com.br
+```text
+Developed-by: Sena JG <senajg@senajg.com>
 
-Versões experimentais dos sites do autor, publicadas em <https://lab.senajg.com.br/> desde a SenaJG-rev.47, de 29/10/2026 (antes, o laboratório ficava em senajg.com.br/my_test_333/). A página inicial do laboratório (`index.html`) é o menu com os links dos testes; cada teste fica numa pasta com uma sigla:
+(Sena JG is a Systems Architect, Information Technology Professional, Information and Communications Technology Professional, Computer Science Graduate, Web Designer, Webmaster, DevOps Engineer, Systems Analyst, and Computer Graphics and 3D Systems Developer)
+Developer of the world's first 3D CASE tool
+(Sena JG é Arquiteto de Sistemas, Profissional de Tecnologia da Informação, Profissional de Tecnologia da Informação e Comunicação, Graduado em Ciência da Computação, Web Designer, Webmaster, Engenheiro DevOps, Analista de Sistemas e Desenvolvedor de Sistemas de Computação Gráfica e em 3D)
+Desenvolvedor da primeira ferramenta CASE 3D do mundo
 
-| Pasta | Efeito |
+Co-developed-by: Anthropic Claude Opus 5.5 <noreply@anthropic.com>
+```
+
+> **Read this first: [`IMPORTANT.md`](IMPORTANT.md).** These are the author's unbreakable guidelines. In Portuguese: [`IMPORTANTE.md`](IMPORTANTE.md).
+
+# my_test_333 — the test lab, at lab.senajg.com.br
+
+**English** · [Português](README.pt.md)
+
+1. Experimental versions of the author's websites, published at <https://lab.senajg.com.br/> since SenaJG-rev.47, of 2026-10-29.
+   1. Before that, the lab was at senajg.com.br/my_test_333/.
+2. The lab's home page (`index.html`) is the menu with the links to the tests.
+3. Each test is in a folder with an abbreviation, in the table "The tests", further below.
+
+## The SenaJG ecosystem
+
+The four repositories, in the official order:
+
+| Order | Name | Website | Official name on GitHub | What it is |
+|---|---|---|---|---|
+| 1 | senajg.com | https://senajg.com/ | `senajg.com` | The author's international website, in English, with a page in Italian. |
+| 2 | senajg.com.br | https://senajg.com.br/ | `avisnet-ship-it.github.io` | The author's website in Portuguese. |
+| 3 | privado | (no website) | `privado` | The project's memory and the programs that build the two websites. It is private. |
+| 4 | Lab | https://lab.senajg.com.br/ | `my_test_333` | The previews that the author approves before anything goes live. |
+
+## The tests
+
+| Folder | Effect |
 |---|---|
-| `nbc/` | Nebulosa em CSS (sem JavaScript) |
-| `bgc/` | Bolhas Galácticas em Canvas |
-| `cec/` | Céu Estelar em Canvas |
-| `cmp/` | Cosmos Completo: estrelas + cometas + bolhas galácticas |
-| `cri/` | O Cristo Cósmico (pt) com estrelas e cometas ×7, sem bolhas |
-| `cri-en/` | The Cosmic Christ (en), idem |
-| `rev82b/` | As listas dos sites, numeradas (proposta): as mesmas 17 páginas da `rev82/`, só com as 17 listas com marcador, em 10 páginas, numeradas, com o número na cor de destaque de cada livro; os textos e a ordem não mudam, e as listas de um item só continuam como estavam. O guia `rev82b/listas/` abre o antes e o depois de cada página. |
-| `rev82/` | As listas dos sites, como estão hoje: as 17 páginas dos dois sites, iguais às do ar em 26/11/2026, sem nenhuma mudança, e o guia `rev82/listas/`, com as 12 páginas que têm listas visíveis, o que pode mudar com a regra 16 (listas numeradas). |
-| `rev78b/` | Prévia do metal leve: as 17 páginas dos dois sites, com a paisagem refletida pelos botões lida de uma imagem por estilo (as `assets/cena-*.webp`, em `_novos/`), e não calculada na hora; com o medidor da `rev77/` (aprovada e publicada na rev.78) |
-| `rev78/` | Teste do preparo do programa do metal, 2ª rodada: como a `rev77b/`, em três versões (o cenário do reflexo lido de uma imagem; o mesmo sem o ruído dos riscos do aço; a de hoje), com um botão para copiar |
-| `rev77b/` | Teste do preparo do programa do metal: sem botões, prepara o programa dos botões de metal em quatro versões, uma de cada vez (a de hoje; sem as 13 repetições do reflexo; com as repetições, sem as fotos; com as fotos lidas num nível fixo), e mostra quanto cada uma leva, com um botão para copiar |
-| `rev77/` | Medição da velocidade: as 17 páginas dos dois sites, iguais às do ar, com um medidor que mostra, 20 s depois de abrir, as travadas, a maior pausa da tela, os quadros por segundo, o tempo sem responder, quando o metal ficou pronto e a placa de vídeo, com um botão para copiar; chaves `?metal=0`, `?fundo=0` (o céu ou as bolhas), `?blur=0` e `?d=` (as estrelas) |
-| `rev68h/` | Prévia da rev.68, versão H: a rev68g com a quarta imagem de universos-bolha no revezamento das três páginas da Realidade (aprovada e publicada na rev.68) |
-| `rev68g/` | Prévia da rev.68, versão G: a linha do trailer no card de O Cristo Cósmico das páginas principais e o título "Veja o pequeno Trailer e entenda o Livro" / "Watch the short Trailer and understand the Book" (aprovada e publicada na rev.68) |
-| `rev68f/` | Prévia da rev.68, versão F: a rev68e com mais espaço acima da capa e mais luz para cima, a aura também no alto |
-| `rev68e/` | Prévia da rev.68, versão E: a rev68d com o vídeo chamado de trailer e a luz da capa na proporção do tamanho dela |
-| `rev68d/` | Prévia da rev.68, versão D: a rev68c com o vídeo na metade do tamanho e a capa do livro com a mesma luz do vídeo |
-| `rev68c/` | Prévia da rev.68, versão C: a rev68b sem o link para o YouTube, com a luz em volta do quadro todo, o quadro com metade da largura no computador, "Veja o pequeno trecho e entenda o livro" e "Sinopse do Livro" |
-| `rev68b/` | Prévia da rev.68, versão B (cruzada): o vídeo entre a capa e a Descrição, com o título, a luz da capa e a legenda da proposta de outra sessão, e a fachada da rev68 |
-| `rev68/` | Prévia da rev.68: o vídeo do livro (YouTube, com fachada) logo abaixo dos botões de compra do topo nas duas páginas do Cristo |
-| `rev67/` | Prévia da rev.67: as 16 páginas e a página nova em italiano de How does The Reality work? (em rev67/en/come-funziona-la-realta/), com o seletor de três línguas nas três páginas desse livro |
-| `rev66d/` | Prévia da rev.66, versão D: a rev66b com, nas duas Realidades, os universos-bolha se revezando a 75% (fusão comum, uma troca a cada 3 s) e a matriz de cubos de metal azul por cima; na página em português, a coluna da esquerda com o mesmo quadro translúcido da direita |
-| `rev66b/` | Prévia da rev.66, versão B: a rev66 com a faixa do topo das duas Realidades na mesma largura (1152 px), sobras e altura de linha |
-| `rev66c/` | Prévia da rev.66, versão C (ideia do autor): a rev66 com o seletor de língua no meio da faixa do topo das duas Realidades |
-| `rev66/` | Prévia da rev.66: o seletor de língua com o mesmo estilo nas 16 páginas (a mesma fonte, peso, altura e sobras; as cores de cada página), toda navegável dentro do laboratório |
-| `idiomas-c/` | Seletor de língua, versão C (ideia do autor): a prévia rev64b com cada botão da altura das bandeiras, o fundo só entre elas, atrás do nome |
-| `idiomas-a/` | Seletor de língua, versão A: a prévia rev64b com só as 4 bandeiras, sem cápsula, e um traço dourado na língua da página |
-| `idiomas-b/` | Seletor de língua, versão B: a prévia rev64b com o seletor numa barra única dividida em duas, a língua da página preenchida |
-| `rev64b/` | Prévia da rev.64: o contato na mesma linha do subtítulo e, nos quatro livros da série Ganhe Dinheiro / Make Money, sem a linha da série abaixo do autor (as 8 páginas de cada site) |
-| `rev64/` | Prévia da rev.64: o metal sem travar a página (começa depois da carga e espera a placa de vídeo sem travar); as três páginas da medição, com o mesmo medidor |
-| `rev63/` | Medição da travada dos botões de metal: três páginas do senajg.com.br com um medidor que mostra, 20 s depois de abrir, os tempos de cada etapa do metal |
-| `rev62/` | Prévia da rev.62: o e-mail de contato abaixo do "Sena JG" do topo e nos dados do autor (as 8 páginas do senajg.com.br e, em `rev62/en/`, as 8 do senajg.com) |
-| `rev61/` | Prévia da rev.61: os botões de metal só com placa de vídeo; sem ela (como no teste ao vivo do Search Console), os botões planos de antes (as 8 páginas do senajg.com.br) |
+| `nbc/` | Nebula in CSS (without JavaScript) |
+| `bgc/` | Galactic Bubbles in Canvas |
+| `cec/` | Starry Sky in Canvas |
+| `cmp/` | Complete Cosmos: stars + comets + galactic bubbles |
+| `cri/` | O Cristo Cósmico (pt) with stars and comets ×7, without bubbles |
+| `cri-en/` | The Cosmic Christ (en), the same |
+| `rev82b/` | The websites' lists, numbered (proposal): the same 17 pages as `rev82/`, with only the 17 bulleted lists, on 10 pages, numbered, with the number in the highlight color of each book; the texts and the order do not change, and the one-item lists stay as they were. The guide `rev82b/listas/` opens the before and the after of each page. |
+| `rev82/` | The websites' lists, as they are today: the 17 pages of the two websites, identical to the live ones on 2026-11-26, without any change, and the guide `rev82/listas/`, with the 12 pages that have visible lists, which may change with rule 16 (numbered lists). |
+| `rev78b/` | Preview of the light metal: the 17 pages of the two websites, with the landscape reflected by the buttons read from one image per style (the `assets/cena-*.webp`, in `_novos/`), and not computed on the fly; with the meter of `rev77/` (approved and published in rev.78) |
+| `rev78/` | Test of the preparation of the metal program, 2nd round: like `rev77b/`, in three versions (the reflection scenery read from an image; the same without the noise of the steel scratches; today's), with a button to copy |
+| `rev77b/` | Test of the preparation of the metal program: without buttons, it prepares the program of the metal buttons in four versions, one at a time (today's; without the 13 repetitions of the reflection; with the repetitions, without the photos; with the photos read at a fixed level), and shows how long each one takes, with a button to copy |
+| `rev77/` | Speed measurement: the 17 pages of the two websites, identical to the live ones, with a meter that shows, 20 s after opening, the freezes, the longest pause of the screen, the frames per second, the time without responding, when the metal was ready and the graphics card, with a button to copy; switches `?metal=0`, `?fundo=0` (the sky or the bubbles), `?blur=0` and `?d=` (the stars) |
+| `rev68h/` | Preview of rev.68, version H: rev68g with the fourth bubble-universe image in the rotation of the three Reality pages (approved and published in rev.68) |
+| `rev68g/` | Preview of rev.68, version G: the trailer line on the card of O Cristo Cósmico on the main pages and the title "Veja o pequeno Trailer e entenda o Livro" / "Watch the short Trailer and understand the Book" (approved and published in rev.68) |
+| `rev68f/` | Preview of rev.68, version F: rev68e with more space above the cover and more light upwards, the aura also at the top |
+| `rev68e/` | Preview of rev.68, version E: rev68d with the video called a trailer and the light of the cover in proportion to its size |
+| `rev68d/` | Preview of rev.68, version D: rev68c with the video at half the size and the book cover with the same light as the video |
+| `rev68c/` | Preview of rev.68, version C: rev68b without the link to YouTube, with the light around the whole frame, the frame at half the width on the computer, "Veja o pequeno trecho e entenda o livro" and "Sinopse do Livro" |
+| `rev68b/` | Preview of rev.68, version B (crossed): the video between the cover and the Description, with the title, the light of the cover and the caption from another session's proposal, and the facade of rev68 |
+| `rev68/` | Preview of rev.68: the book's video (YouTube, with a facade) right below the buy buttons at the top of the two Christ pages |
+| `rev67/` | Preview of rev.67: the 16 pages and the new Italian page of How does The Reality work? (at rev67/en/come-funziona-la-realta/), with the three-language selector on the three pages of that book |
+| `rev66d/` | Preview of rev.66, version D: rev66b with, on the two Reality pages, the bubble universes taking turns at 75% (normal blend, one change every 3 s) and the matrix of blue metal cubes on top; on the Portuguese page, the left column with the same translucent panel as the right one |
+| `rev66b/` | Preview of rev.66, version B: rev66 with the top band of the two Reality pages at the same width (1152 px), margins and line height |
+| `rev66c/` | Preview of rev.66, version C (the author's idea): rev66 with the language selector in the middle of the top band of the two Reality pages |
+| `rev66/` | Preview of rev.66: the language selector with the same style on the 16 pages (the same font, weight, height and margins; the colors of each page), fully navigable inside the lab |
+| `idiomas-c/` | Language selector, version C (the author's idea): the rev64b preview with each button as tall as the flags, the background only between them, behind the name |
+| `idiomas-a/` | Language selector, version A: the rev64b preview with only the 4 flags, without a capsule, and a golden stroke on the language of the page |
+| `idiomas-b/` | Language selector, version B: the rev64b preview with the selector in a single bar split in two, the language of the page filled in |
+| `rev64b/` | Preview of rev.64: the contact on the same line as the subtitle and, in the four books of the series Ganhe Dinheiro / Make Money, without the series line below the author (the 8 pages of each website) |
+| `rev64/` | Preview of rev.64: the metal without freezing the page (it starts after the page loads and waits for the graphics card without freezing); the three measurement pages, with the same meter |
+| `rev63/` | Measurement of the freeze of the metal buttons: three pages of senajg.com.br with a meter that shows, 20 s after opening, the times of each stage of the metal |
+| `rev62/` | Preview of rev.62: the contact email below the "Sena JG" at the top and in the author's data (the 8 pages of senajg.com.br and, in `rev62/en/`, the 8 of senajg.com) |
+| `rev61/` | Preview of rev.61: the metal buttons only with a graphics card; without one (as in the live test of Search Console), the flat buttons from before (the 8 pages of senajg.com.br) |
 
-As páginas têm `noindex` e não aparecem no Google. Nos testes de fundo, o conteúdo é a página principal original
-e muda só o fundo; eles são gerados por `tools/gen_testes.py` (repositório privado). As prévias `revNN/` são cópias dos sites,
-montadas para o autor testar antes de aprovar; como montar uma está no `docs/runbook.md` do privado. As prévias de antes da v4.0.0
-(`rev39/`, `links/`, `autor-a/`, `autor-b/`, `rev51/` e `senajg-com/`) saíram na SenaJG-rev.69 (15/11/2026), por decisão do autor;
-o histórico delas continua no Git deste repositório.
+## How the lab works
 
-Os endereços do que vem do site (imagens, ícones e programas de `/assets/`, páginas dos livros) estão completos,
-`https://senajg.com.br/...`, porque a raiz do lab.senajg.com.br é a do laboratório. O ajuste é do
-`tools/lab_enderecos.py` (repositório privado); os links entre as páginas de uma prévia ficam dentro do laboratório.
+1. The pages have `noindex` and do not appear on Google.
+2. In the background tests, the content is the original home page, and only the background changes.
+   1. They are generated by `tools/gen_testes.py` (private repository).
+3. The `revNN/` previews are copies of the websites, built for the author to test before approving.
+   1. How to build one is in `docs/runbook.md`, in the private repository.
+4. The previews from before v4.0.0 (`rev39/`, `links/`, `autor-a/`, `autor-b/`, `rev51/` and `senajg-com/`) were removed in SenaJG-rev.69 (2026-11-15), by the author's decision.
+   1. Their history is still in the Git of this repository.
+5. The addresses of what comes from the website (images, icons and programs from `/assets/`, the book pages) are complete, `https://senajg.com.br/...`, because the root of lab.senajg.com.br is the lab's.
+   1. The adjustment is made by `tools/lab_enderecos.py` (private repository).
+   2. The links between the pages of a preview stay inside the lab.
+6. Density of the celestial bodies: 2.75× by default; adjust it with `?d=1` (original), `?d=2.5`, `?d=3`... in the URL.
 
-Densidade dos corpos celestes: padrão 2,75×; ajuste com `?d=1` (original), `?d=2.5`, `?d=3`... na URL.
+## Version
 
-## Versão
+1. This lab follows version **v4.3.1** (SenaJG-rev.81) of the website, of 2026-11-26.
+2. The version process (tags, branches and Releases) is in `VERSIONING.md`, in the project's private repository, `avisnet-ship-it/privado`.
+3. The AI agent files here remind the agents to read it before acting.
 
-Este laboratório acompanha a versão **v4.3.1** (SenaJG-rev.81) do site, de 26/11/2026. O processo de versão (tags, branches e Releases) está no `VERSIONING.md` do repositório privado do projeto, `avisnet-ship-it/privado`; o `CLAUDE.md` daqui lembra o Claude de lê-lo antes de agir.
+## Files
+
+1. **The guidelines:** `IMPORTANT.md` and `IMPORTANT.txt`, in English; `IMPORTANTE.md` and `IMPORTANTE.txt`, in Portuguese.
+2. **This readme:**
+   1. `README.md`: in English, the canonical text for writing; every change starts here.
+   2. `README.txt`: extracted from `README.md`.
+   3. `readme.html`: the page for visitors, made from `README.md`. Like the other pages of the lab, it has `noindex`; the lab has no sitemap.
+   4. The Portuguese version: [`README.pt.md`](README.pt.md), [`README.pt.txt`](README.pt.txt) and [`readme.pt.html`](readme.pt.html).
+   5. The names follow the market standard: `README.<language>.md`, with the BCP 47 language code, without the region.
+   6. Every file is in UTF-8.
+3. **The AI agent files,** with the instructions for the agents, all with the same text, pointing to the private repository: `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` and `.github/copilot-instructions.md`.
+4. `CNAME`: the lab's domain (`lab.senajg.com.br`).
+5. `index.html`: the home page, the menu with the links to the tests.
+
+**English** · [Português](README.pt.md)
